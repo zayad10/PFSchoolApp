@@ -30,11 +30,11 @@ public class Student {
 	@Column(name = "Year")
 	@Min(value = 1)
 	@Max(value = 3)
-	private Integer Year;
+	private Integer year;
 	
 	@Column(name = "Status")
 	@NotNull
-	private StudentStatus Status;
+	private StudentStatus status;
 	
 	@Column(name = "Resit_Score")
 	@Min(value = 1)
@@ -79,28 +79,28 @@ public class Student {
 	 * @return the year
 	 */
 	public Integer getYear() {
-		return Year;
+		return year;
 	}
 
 	/**
 	 * @param year the year to set
 	 */
 	public void setYear(Integer year) {
-		Year = year;
+		this.year = year;
 	}
 
 	/**
 	 * @return the status
 	 */
 	public StudentStatus getStatus() {
-		return Status;
+		return status;
 	}
 
 	/**
 	 * @param status the status to set
 	 */
 	public void setStatus(StudentStatus status) {
-		Status = status;
+		this.status = status;
 	}
 
 	/**
