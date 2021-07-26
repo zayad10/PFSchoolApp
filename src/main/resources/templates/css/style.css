@@ -1,0 +1,49 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+.gridContainer {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+.loginButton {
+    font-weight: bold;
+    font-size: large;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: white;
+    background-color: rgb(27, 116, 231);
+    width: 200px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+#staffLogin {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    align-self: center;
+}
+
+#studentLogin {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    align-self: end;
+}
+
+#registerStudent {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: center;
+    color: black;
+    font-size: medium;
+}
