@@ -25,7 +25,8 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     grid-row-start: 2;
     grid-row-end: 3;
     justify-self: center;
-    align-self: center;
+    align-self: end;
+    margin-bottom: 70px;
 }
 
 #studentLogin {
@@ -44,6 +45,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     grid-row-end: 4;
     justify-self: center;
     align-self: center;
-    color: black;
     font-size: medium;
+    color: black;
+    margin-bottom: 80px
 }
