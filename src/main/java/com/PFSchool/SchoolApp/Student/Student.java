@@ -34,7 +34,7 @@ public class Student {
 	
 	@Column(name = "Status")
 	@NotNull
-	private String Status;
+	private StudentStatus Status;
 	
 	@Column(name = "Resit_Score")
 	@Min(value = 1)
@@ -92,14 +92,14 @@ public class Student {
 	/**
 	 * @return the status
 	 */
-	public String getStatus() {
+	public StudentStatus getStatus() {
 		return Status;
 	}
 
 	/**
 	 * @param status the status to set
 	 */
-	public void setStatus(String status) {
+	public void setStatus(StudentStatus status) {
 		Status = status;
 	}
 
