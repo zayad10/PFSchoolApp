@@ -40,6 +40,12 @@ public class Student {
 	@Min(value = 1)
 	@Max(value = 100)
 	private Integer resitScore;
+	
+	/**
+	 * Empty constructor to initialise a Student. 
+	 */
+	public Student() {
+	}
 
 	/**
 	 * @return the firstName
