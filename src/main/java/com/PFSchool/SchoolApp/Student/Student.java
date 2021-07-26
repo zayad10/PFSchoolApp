@@ -40,6 +40,76 @@ public class Student {
 	@Min(value = 1)
 	@Max(value = 100)
 	private Integer resitScore;
+
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName() {
+		return firstName;
+	}
+
+	/**
+	 * @param firstName the firstName to set
+	 */
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+
+	/**
+	 * @param lastName the lastName to set
+	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	/**
+	 * @return the year
+	 */
+	public Integer getYear() {
+		return Year;
+	}
+
+	/**
+	 * @param year the year to set
+	 */
+	public void setYear(Integer year) {
+		Year = year;
+	}
+
+	/**
+	 * @return the status
+	 */
+	public String getStatus() {
+		return Status;
+	}
+
+	/**
+	 * @param status the status to set
+	 */
+	public void setStatus(String status) {
+		Status = status;
+	}
+
+	/**
+	 * @return the resitScore
+	 */
+	public Integer getResitScore() {
+		return resitScore;
+	}
+
+	/**
+	 * @param resitScore the resitScore to set
+	 */
+	public void setResitScore(Integer resitScore) {
+		this.resitScore = resitScore;
+	}
 	
 	
 
