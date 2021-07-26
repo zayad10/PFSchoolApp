@@ -17,7 +17,7 @@ public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Student_ID")
-	private Integer itemId;
+	private Integer studentId;
 	
 	@Column(name = "First_Name")
 	@NotNull
@@ -40,5 +40,7 @@ public class Student {
 	@Min(value = 1)
 	@Max(value = 100)
 	private Integer resitScore;
+	
+	
 
 }
