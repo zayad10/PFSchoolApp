@@ -2,6 +2,9 @@ package com.PFSchool.SchoolApp.Staff;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.sun.istack.NotNull;
@@ -13,7 +16,7 @@ public class Staff {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "StaffID")
-	private Integer staffID'
+	private Integer staffID;
 	
 	@Column(name = "First_Name")
 	@NotNull
