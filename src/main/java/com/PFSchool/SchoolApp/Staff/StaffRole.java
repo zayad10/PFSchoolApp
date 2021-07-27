@@ -1,4 +1,4 @@
-package com.PFSchool.SchoolApp.Student;
+package com.PFSchool.SchoolApp.Staff;
 
 public enum StaffRole {
 	TEACHER("Teacher"),
