@@ -26,6 +26,13 @@ public class Module {
 	}
 	
 	/**
+	 * @return the moduleID
+	 */
+	public Integer getModuleID() {
+		return moduleID;
+	}
+
+	/**
 	 * @return the moduleName
 	 */
 	public ModuleName getModuleName() {
@@ -39,12 +46,6 @@ public class Module {
 		this.moduleName = moduleName;
 	}
 
-	/**
-	 * @param moduleID the moduleID to set
-	 */
-	public void setModuleID(Integer moduleID) {
-		this.moduleID = moduleID;
-	}
 	
 
 }
