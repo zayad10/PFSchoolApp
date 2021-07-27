@@ -10,22 +10,22 @@ import com.PFSchool.SchoolApp.Module.Module;
 
 @Entity
 @Table(name = "teacher_module")
-public class TeacherModule implements Serializable {
-  
-  /**
-   * 
-   */
-  private static final long serialVersionUID = 1L;
+public class TeacherModule {
 
   @Id
+  private Integer teacherModuleId;
+  
   @ManyToOne
   private Module module;
   
-  @Id
   @ManyToOne
   private Student student;
   
   public TeacherModule() {
+  }
+  
+  public Integer getTeacherModuleId() {
+    return teacherModuleId;
   }
   
   public Module getModule() {
@@ -34,6 +34,10 @@ public class TeacherModule implements Serializable {
   
   public Student getStudent() {
     return student;
+  }
+  
+  public void setTeacherModuleId(Integer id) {
+   teacherModuleId = id;
   }
   
   public void setModule(Module module) {

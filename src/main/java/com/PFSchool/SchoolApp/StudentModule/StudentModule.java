@@ -12,14 +12,19 @@ import com.PFSchool.SchoolApp.Student.Student;
 public class StudentModule {
   
   @Id
+  private Integer studentModuleId;
+  
   @ManyToOne
   private Module module;
   
-  @Id
   @ManyToOne
   private Student student;
   
   public StudentModule() {
+  }
+  
+  public Integer getStudentModuleId() {
+    return studentModuleId;
   }
   
   public Module getModule() {
@@ -28,6 +33,10 @@ public class StudentModule {
   
   public Student getStudent() {
     return student;
+  }
+  
+  public void setStudentModuleId(Integer id) {
+    studentModuleId = id;
   }
   
   public void setModule(Module module) {
