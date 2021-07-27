@@ -34,7 +34,7 @@ public class Staff {
 	@NotNull
 	private Department department;
 	
-	private Staff() {
+	public Staff() {
 	}
 
 	/**
