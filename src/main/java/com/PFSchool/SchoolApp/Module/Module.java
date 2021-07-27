@@ -22,6 +22,9 @@ public class Module {
 	@NotNull
 	private ModuleName moduleName;
 
+	public Module() {
+	}
+	
 	/**
 	 * @return the moduleName
 	 */
