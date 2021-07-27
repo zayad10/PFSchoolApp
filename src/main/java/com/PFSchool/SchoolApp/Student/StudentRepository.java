@@ -10,4 +10,6 @@ import org.springframework.stereotype.Repository;
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 
 	public List<Student> findByYear(Integer year);
+	
+	public List<Student> findByStatus(StudentStatus status);
 }
