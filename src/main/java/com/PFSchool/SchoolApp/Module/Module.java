@@ -21,6 +21,27 @@ public class Module {
 	@Column(name = "module name")
 	@NotNull
 	private ModuleName moduleName;
+
+	/**
+	 * @return the moduleName
+	 */
+	public ModuleName getModuleName() {
+		return moduleName;
+	}
+
+	/**
+	 * @param moduleName the moduleName to set
+	 */
+	public void setModuleName(ModuleName moduleName) {
+		this.moduleName = moduleName;
+	}
+
+	/**
+	 * @param moduleID the moduleID to set
+	 */
+	public void setModuleID(Integer moduleID) {
+		this.moduleID = moduleID;
+	}
 	
 
 }
