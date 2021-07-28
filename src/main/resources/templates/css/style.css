@@ -1,4 +1,4 @@
-html, body {margin: 0; height: 100%; overflow: hidden}
+html, body {margin: 0; height: 100%; overflow: hidden; font-family: "Comic Sans MS", "Comic Sans", cursive;}
 
 .landingPageGridContainer {
     display: grid;
@@ -11,7 +11,6 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 .loginButton {
     font-weight: bold;
     font-size: large;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
     color: white;
     background-color: rgb(27, 116, 231);
     width: 200px;
@@ -48,4 +47,76 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     font-size: medium;
     color: black;
     margin-bottom: 80px
+}
+
+.studentDashboardGridContainer {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 50px 50px 1fr;
+}
+
+.studentDashboardNav {
+    background-color: rgb(27, 116, 231);
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#studentDashboardNavWelcome {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#studentDashboardNavLogout {
+    float: right;
+    background-color: red;
+    height: 50px;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+#studentDashboardStatusContainer {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#studentDashboardStatusColor {
+    width: 300px;
+    height: 50px;
+    background-color: rgb(27, 116, 231);
+}
+
+#studentDashboardStatus {
+    margin-left: 14px;
+    margin-top: 8px;
+    position: absolute;
+    color: white;
+}
+
+#studentDashboardModules {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    background-color: rgb(27, 116, 231);
+    color: white;
+    height: 50px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
