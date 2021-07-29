@@ -10,5 +10,9 @@ public class IndexController {
   public String index() {
     return "LandingPage";
   }
-
+  
+  @RequestMapping("/student-dashboard")
+  public String studentDashboard() {
+    return "StudentDashboard";
+  }
 }
