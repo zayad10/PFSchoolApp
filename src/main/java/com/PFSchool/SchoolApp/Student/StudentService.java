@@ -36,4 +36,15 @@ public class StudentService {
 	    	}
 	    return output;
 	}
+	
+	public List<Student> getFailedStudents() {
+		List<Student> output = new ArrayList<>();
+		for (Student cur : getAllStudents()) {
+			if(cur.getResitScore() < 40) {
+				output.add(cur);
+			}
+		}
+		return output;
+	}
+	
 }
