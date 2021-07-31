@@ -47,4 +47,8 @@ public class StudentService {
 		return output;
 	}
 	
+	public List<Student> getByYear(Integer year) {
+		return studentRepository.findByYear(year);
+	}
+	
 }
