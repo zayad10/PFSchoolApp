@@ -36,6 +36,13 @@ public class Staff {
 	
 	public Staff() {
 	}
+	
+	public Staff(String firstName, String lastName, StaffRole role, Department department) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.role = role;
+		this.department = department;
+	}
 
 	/**
 	 * @return the firstName
