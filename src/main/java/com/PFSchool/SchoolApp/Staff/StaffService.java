@@ -26,4 +26,14 @@ public class StaffService {
 	    	}
 	    return output;
 	}
+	
+	public List<Staff> getByDepartment(Department dept) {
+		List<Staff> output = new ArrayList<>();
+	    for(Staff cur : getAllStaff()) {
+	    	if(cur.getDepartment().equals(dept)) {
+	    		output.add(cur);
+	    		}
+	    	}
+	    return output;
+	}
 }
