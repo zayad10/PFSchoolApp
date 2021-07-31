@@ -22,6 +22,10 @@ public class StaffService {
 		staffRepository.save(member);
 	}
 	
+	public void deleteStaffByID(Integer id) {
+		staffRepository.deleteById(id);
+	}
+	
 	public List<Staff> getAllTeachers() {
 		List<Staff> output = new ArrayList<>();
 		StaffRole teacher = StaffRole.TEACHER;
