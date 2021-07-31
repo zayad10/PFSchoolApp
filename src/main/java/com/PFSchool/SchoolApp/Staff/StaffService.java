@@ -36,4 +36,10 @@ public class StaffService {
 	    	}
 	    return output;
 	}
+	
+	public Staff getById(Integer id) {
+		for (Staff cur : getAllStaff()) {
+			//if(cur.getId)
+		}
+	}
 }

@@ -44,6 +44,14 @@ public class Staff {
 		this.department = department;
 	}
 
+	public Integer getStaffID() {
+		return staffID;
+	}
+
+	public void setStaffID(Integer staffID) {
+		this.staffID = staffID;
+	}
+
 	/**
 	 * @return the firstName
 	 */
