@@ -18,6 +18,10 @@ public class StaffService {
 		return staffRepository.findAll();
 	}
 	
+	public void addStaff(Staff member) {
+		staffRepository.save(member);
+	}
+	
 	public List<Staff> getAllTeachers() {
 		List<Staff> output = new ArrayList<>();
 		StaffRole teacher = StaffRole.TEACHER;
@@ -41,6 +45,5 @@ public class StaffService {
 	
 	public Staff getByStaffID(Integer id) {
 		return staffRepository.findById(id).orElseThrow(EntityNotFoundException::new);
-		}
 	}
 }
