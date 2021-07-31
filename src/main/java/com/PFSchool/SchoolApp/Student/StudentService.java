@@ -17,4 +17,12 @@ public class StudentService {
 		return studentRepository.findAll();
 	}
 	
+	public void addStudent(Student pupil) {
+		studentRepository.save(pupil);
+	}
+	
+	public void deleteStudentByID(Integer id) {
+		studentRepository.deleteById(id);
+	}
+	
 }
