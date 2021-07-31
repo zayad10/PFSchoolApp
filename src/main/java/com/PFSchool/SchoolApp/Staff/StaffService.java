@@ -3,6 +3,8 @@ package com.PFSchool.SchoolApp.Staff;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,9 +39,8 @@ public class StaffService {
 	    return output;
 	}
 	
-	public Staff getById(Integer id) {
-		for (Staff cur : getAllStaff()) {
-			//if(cur.getId)
+	public Staff getByStaffID(Integer id) {
+		return staffRepository.findById(id).orElseThrow(EntityNotFoundException::new);
 		}
 	}
 }
