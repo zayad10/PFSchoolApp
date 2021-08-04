@@ -48,10 +48,28 @@ public class TeacherModuleService {
    */
   public List<Staff> getStaffForModule(Module module) {
     List<TeacherModule> teacherModules = teacherModuleRepository.findByModule(module);
-    List<Staff> modules = new ArrayList<Staff>();
+    List<Staff> staff = new ArrayList<Staff>();
     
     for (TeacherModule teacherModule : teacherModules) {
-      modules.add(teacherModule.getStaff());
+      staff.add(teacherModule.getStaff());
+    }
+    
+    return staff;
+  }
+  
+  /**
+   * Gets list of modules taught by a staff member.
+   * 
+   * @param staff who teaches modules
+   * 
+   * @return list of modules staff is assigned to
+   */
+  public List<Module> getModuleForStaff(Staff staff) {
+    List<TeacherModule> teacherModules = teacherModuleRepository.findByStaff(staff);
+    List<Module> modules = new ArrayList<Module>();
+    
+    for (TeacherModule teacherModule : teacherModules) {
+      modules.add(teacherModule.getModule());
     }
     
     return modules;
