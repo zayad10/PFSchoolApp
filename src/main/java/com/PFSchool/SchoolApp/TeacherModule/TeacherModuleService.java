@@ -7,6 +7,11 @@ import org.springframework.stereotype.Service;
 import com.PFSchool.SchoolApp.Staff.Staff;
 import com.PFSchool.SchoolApp.Module.Module;
 
+/**
+ * Service class for TeacherModuleService
+ * 
+ * @author James
+ */
 @Service
 public class TeacherModuleService {
   
@@ -16,14 +21,31 @@ public class TeacherModuleService {
   @Autowired
   private TeacherModuleService teacherService;
   
+  /**
+   * Add relation between a teacher and a module.
+   * 
+   * @param teacherModule
+   */
   public void addTeacherModule(TeacherModule teacherModule) {
     teacherModuleRepository.save(teacherModule);
   }
   
+  /**
+   * Gets all teacher modules.
+   * 
+   * @return list of teacher modules
+   */
   public List<TeacherModule> getAllTeacherModule() {
     return teacherModuleRepository.findAll();
   }
   
+  /**
+   * Gets list of staff teaching a module.
+   * 
+   * @param module staff teach
+   * 
+   * @return list of staff teaching a cetain module
+   */
   public List<Staff> getStaffForModule(Module module) {
     List<TeacherModule> teacherModules = teacherModuleRepository.findByModule(module);
     List<Staff> modules = new ArrayList<Staff>();
