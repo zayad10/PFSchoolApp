@@ -29,7 +29,7 @@ public class TeacherModuleService {
     List<Staff> modules = new ArrayList<Staff>();
     
     for (TeacherModule teacherModule : teacherModules) {
-      modules.add(teacherModule.getTeacher());
+      modules.add(teacherModule.getStaff());
     }
     
     return modules;

@@ -7,6 +7,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import com.PFSchool.SchoolApp.Student.Student;
 import com.PFSchool.SchoolApp.Module.Module;
+import com.PFSchool.SchoolApp.Staff.Staff;
 
 @Entity
 @Table(name = "teacher_module")
@@ -19,7 +20,7 @@ public class TeacherModule {
   private Module module;
   
   @ManyToOne
-  private Student student;
+  private Staff staff;
   
   public TeacherModule() {
   }
@@ -32,8 +33,8 @@ public class TeacherModule {
     return module;
   }
   
-  public Student getStudent() {
-    return student;
+  public Staff getStaff() {
+    return staff;
   }
   
   public void setTeacherModuleId(Integer id) {
@@ -44,7 +45,7 @@ public class TeacherModule {
     this.module = module;
   }
   
-  public void setStudent(Student student) {
-    this.student = student;
+  public void setStaff(Staff staff) {
+    this.staff = staff;
   }
 }
