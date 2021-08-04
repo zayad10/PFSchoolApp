@@ -1,8 +1,11 @@
 package com.PFSchool.SchoolApp.StudentModule;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.PFSchool.SchoolApp.Student.Student;
+import com.PFSchool.SchoolApp.Module.Module;
 
 /**
  * Service class for student relation with a module
@@ -31,5 +34,23 @@ public class StudentModuleService {
    */
   public List<StudentModule> getAllStudentModules() {
     return studentModuleRepository.findAll();
+  }
+  
+  /**
+   * Gets list of modules taken by a student.
+   * 
+   * @param student taking the modules
+   * 
+   * @return modules taken by student
+   */
+  public List<Module> getModulesForStudent(Student student) {
+    List<StudentModule> studentModules = studentModuleRepository.findByStudent(student);
+    List<Module> modules = new ArrayList<Module>();
+    
+    for (StudentModule studentModule : studentModules) {
+      modules.add(studentModule.getModule());
+    }
+    
+    return modules;
   }
 }
