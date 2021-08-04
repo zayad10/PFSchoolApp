@@ -53,4 +53,22 @@ public class StudentModuleService {
     
     return modules;
   }
+  
+  /**
+   * Gets list of students taking a module.
+   * 
+   * @param module students are taking
+   * 
+   * @return list of students taking a module
+   */
+  public List<Student> getStudentForModule(Module module) {
+    List<StudentModule> studentModules = studentModuleRepository.findByModule(module);
+    List<Student> students = new ArrayList<Student>();
+    
+    for (StudentModule studentModule : studentModules) {
+      students.add(studentModule.getStudent());
+    }
+    
+    return students;
+  }
 }
