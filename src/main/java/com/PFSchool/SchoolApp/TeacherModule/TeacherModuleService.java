@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.PFSchool.SchoolApp.Staff.Staff;
+import com.PFSchool.SchoolApp.Staff.StaffService;
 import com.PFSchool.SchoolApp.Module.Module;
 
 /**
@@ -19,7 +20,7 @@ public class TeacherModuleService {
   private TeacherModuleRepository teacherModuleRepository;
   
   @Autowired
-  private TeacherModuleService teacherService;
+  private StaffService staffService;
   
   /**
    * Add relation between a teacher and a module.
@@ -60,11 +61,12 @@ public class TeacherModuleService {
   /**
    * Gets list of modules taught by a staff member.
    * 
-   * @param staff who teaches modules
+   * @param staffId of staff who teaches modules
    * 
    * @return list of modules staff is assigned to
    */
-  public List<Module> getModuleForStaff(Staff staff) {
+  public List<Module> getModuleForStaff(Integer staffId) {
+    Staff staff = staffService.getByStaffID(staffId);
     List<TeacherModule> teacherModules = teacherModuleRepository.findByStaff(staff);
     List<Module> modules = new ArrayList<Module>();
     
