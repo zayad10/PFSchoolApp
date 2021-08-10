@@ -27,4 +27,8 @@ public class IndexController {
     return "";
   }
 
+  @RequestMapping("/student-dashboard")
+  public String studentDashboard() {
+    return "StudentDashboard";
+  }
 }
