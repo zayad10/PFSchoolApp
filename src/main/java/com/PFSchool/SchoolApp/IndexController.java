@@ -24,7 +24,7 @@ public class IndexController {
   public String getStudentModules(@PathVariable Integer studentId, ModelMap model) {
     List<Module> modules = studentModuleService.getModulesForStudent(studentId);
     model.put("modules", modules);
-    return "";
+    return "StudentDashboard";
   }
 
   @RequestMapping("/student-dashboard")
