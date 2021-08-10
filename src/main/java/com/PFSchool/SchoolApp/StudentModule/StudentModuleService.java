@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.PFSchool.SchoolApp.Student.Student;
+import com.PFSchool.SchoolApp.Student.StudentService;
 import com.PFSchool.SchoolApp.Module.Module;
 
 /**
@@ -17,6 +18,9 @@ public class StudentModuleService {
   
   @Autowired
   private StudentModuleRepository studentModuleRepository;
+  
+  @Autowired
+  private StudentService studentService;
 
   /**
    * Add student to a module.
@@ -43,7 +47,8 @@ public class StudentModuleService {
    * 
    * @return modules taken by student
    */
-  public List<Module> getModulesForStudent(Student student) {
+  public List<Module> getModulesForStudent(Integer studentId) {
+    Student student = studentService.getStudentById(studentId);
     List<StudentModule> studentModules = studentModuleRepository.findByStudent(student);
     List<Module> modules = new ArrayList<Module>();
     
