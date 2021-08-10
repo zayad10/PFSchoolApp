@@ -2,7 +2,7 @@ package com.PFSchool.SchoolApp.Student;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import javax.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,4 +51,7 @@ public class StudentService {
 		return studentRepository.findByYear(year);
 	}
 	
+	public Student getStudentById(Integer id) throws EntityNotFoundException {
+	  return studentRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+	}
 }
