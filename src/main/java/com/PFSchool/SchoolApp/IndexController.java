@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.PFSchool.SchoolApp.Module.Module;
 import com.PFSchool.SchoolApp.StudentModule.StudentModuleService;
+import com.PFSchool.SchoolApp.TeacherModule.TeacherModuleService;
 
 @Controller
 public class IndexController {
@@ -15,12 +16,15 @@ public class IndexController {
   @Autowired
   private StudentModuleService studentModuleService;
   
+  @Autowired
+  private TeacherModuleService teacherModuleService;
+  
   @RequestMapping("/")
   public String index() {
     return "LandingPage";
   }
   
-  @RequestMapping("get-modules-for/{studentId}")
+  @RequestMapping("/get-modules-for-student/{studentId}")
   public String getStudentModules(@PathVariable Integer studentId, ModelMap model) {
     List<Module> modules = studentModuleService.getModulesForStudent(studentId);
     model.put("modules", modules);
@@ -29,6 +33,13 @@ public class IndexController {
 
   @RequestMapping("/student-dashboard")
   public String studentDashboard() {
+    return "StudentDashboard";
+  }
+  
+  @RequestMapping("/get-modules-for-staff/{staffId}")
+  public String getStaffModules(@PathVariable Integer staffId, ModelMap model) {
+    List<Module> modules = teacherModuleService.getModuleForStaff(staffId);
+    model.put("modules", modules);
     return "StudentDashboard";
   }
 }
