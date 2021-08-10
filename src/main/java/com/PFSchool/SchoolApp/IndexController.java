@@ -24,22 +24,22 @@ public class IndexController {
     return "LandingPage";
   }
   
-  @RequestMapping("/get-modules-for-student/{studentId}")
-  public String getStudentModules(@PathVariable Integer studentId, ModelMap model) {
-    List<Module> modules = studentModuleService.getModulesForStudent(studentId);
-    model.put("modules", modules);
-    return "StudentDashboard";
-  }
+//  @RequestMapping("/get-modules-for-student/{studentId}")
+//  public String getStudentModules(@PathVariable Integer studentId, ModelMap model) {
+//    List<Module> modules = studentModuleService.getModulesForStudent(studentId);
+//    model.put("modules", modules);
+//    return "StudentDashboard";
+//  }
 
   @RequestMapping("/student-dashboard")
   public String studentDashboard() {
     return "StudentDashboard";
   }
   
-  @RequestMapping("/get-modules-for-staff/{staffId}")
-  public String getStaffModules(@PathVariable Integer staffId, ModelMap model) {
-    List<Module> modules = teacherModuleService.getModuleForStaff(staffId);
-    model.put("modules", modules);
-    return "StudentDashboard";
-  }
+//  @RequestMapping("/get-modules-for-staff/{staffId}")
+//  public String getStaffModules(@PathVariable Integer staffId, ModelMap model) {
+//    List<Module> modules = teacherModuleService.getModuleForStaff(staffId);
+//    model.put("modules", modules);
+//    return "StudentDashboard";
+//  }
 }
